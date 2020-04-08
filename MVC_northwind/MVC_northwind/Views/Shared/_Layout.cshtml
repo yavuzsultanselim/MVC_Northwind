@@ -5,29 +5,23 @@
 
 <!DOCTYPE html>
 
-<html lang="en">
-
+<html>
 <head>
-
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
-
-    <title>Shop Homepage - Start Bootstrap Template</title>
+    <meta name="viewport" content="width=device-width" />
+    <title>_Layout</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="~/Content/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="~/Content/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
 
     <!-- Custom styles for this template -->
-    <link href="~/Content/css/shop-homepage.css" rel="stylesheet">
-
+    <link href="~/Content/css/shop-homepage.css" rel="stylesheet" />
 </head>
 <body>
-    <!--Header-->
+
+    <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
         <div class="container">
-            <a class="navbar-brand" href="#">CINEMA-TOR</a>
+            <a class="navbar-brand" href="/Home/Index">Northwind</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -35,44 +29,39 @@
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item active">
                         <a class="nav-link" href="/Home/Index">
-                            Home
+                            Anasayfa
                             <span class="sr-only">(current)</span>
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/Home/Vizyon">Vizyondakiler</a>
+                        <a class="nav-link" href="/Product/Index">Ürünler</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">En Yeniler</a>
+                        <a class="nav-link" href="/Order/Index">Siparişler</a>
                     </li>
-                    <li class="nav-item">
-                        <div class="dropdown">
-                            <button class="btn btn-default dropdown-toggle nav-link" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-                                Giriş
-                                <span class="caret"></span>
-                            </button>
-                            <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-                                <li><a href="#">Çoktaaan Üyeyim</a></li>
-                                <li><a href="#">Yeni Üyelik</a></li>
-                            </ul>
-                        </div>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Contact</a>
-                    </li>
+                   
+                   
+
                 </ul>
             </div>
         </div>
     </nav>
 
+
+    <!-- Page Content -->
     @RenderBody()
-
-
-    <!--Footer-->
+    <!-- /.container -->
+    <!-- Footer -->
     <footer class="py-5 bg-dark">
         <div class="container">
-            <p class="m-0 text-center text-white">Copyright © Your Website 2019</p>
+            <p class="m-0 text-center text-white">Copyright &copy; Northwind 2020</p>
         </div>
+        <!-- /.container -->
     </footer>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="~/Content/vendor/jquery/jquery.min.js"></script>
+    <script src="~/Content/vendor/bootstrap/js/bootstrap.min.js"></script>
+
 </body>
 </html>

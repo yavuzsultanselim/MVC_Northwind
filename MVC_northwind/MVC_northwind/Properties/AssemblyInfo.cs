@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("MVC_northwind")]
+[assembly: AssemblyTitle("MVC_Northwind")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("MVC_northwind")]
+[assembly: AssemblyProduct("MVC_Northwind")]
 [assembly: AssemblyCopyright("Copyright ©  2020")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("6ae73f86-adfc-437e-9c23-0d023a61b5e6")]
+[assembly: Guid("ac8b9355-98f6-4daa-ba00-ac4d0506d0cb")]
 
 // Version information for an assembly consists of the following four values:
 //

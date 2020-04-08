@@ -1,0 +1,54 @@
+﻿
+@{
+    ViewBag.Title = "GrainsCereals";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container">
+    <center> <h2>Grains/Cereals</h2></center>
+    <div class="row">
+        <table class="table table-hover">
+            <thead>
+                <tr>
+                    <th>Ürün Id</th>
+                    <th>Ürün Adı</th>
+                    <th>Fiyat</th>
+                    <th>Stok</th>
+                    <th>Durum</th>
+                    <th>Düzenle</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>22</td>
+                    <td>Queso Cabrales</td>
+                    <td>21$</td>
+                    <td>104</td>
+                    <td>Read to Go</td>
+                    <td>
+                        <button class="btn btn-sm btn-danger">Sil</button>
+                        <button class="btn btn-sm btn-warning">Güncelle</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>23</td>
+                    <td>Tunnbröd</td>
+                    <td>9$</td>
+                    <td>61</td>
+                    <td>Read to Go</td>
+                    <td>
+                        <button class="btn btn-sm btn-danger">Sil</button>
+                        <button class="btn btn-sm btn-warning">Güncelle</button>
+                    </td>
+                </tr>
+
+
+                <tr style="text-align:center">
+                    <td colspan="6"> <button class="btn btn-success">Ürün Ekle</button> </td>
+
+                </tr>
+
+            </tbody>
+        </table>
+    </div>
+</div>

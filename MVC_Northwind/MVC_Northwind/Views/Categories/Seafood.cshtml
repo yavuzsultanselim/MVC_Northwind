@@ -1,0 +1,55 @@
+﻿
+@{
+    ViewBag.Title = "Seafood";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<div class="container">
+    <center> <h2>Seafood</h2></center>
+    <div class="row">
+        <table class="table table-hover">
+            <thead>
+                <tr>
+                    <th>Ürün Id</th>
+                    <th>Ürün Adı</th>
+                    <th>Fiyat</th>
+                    <th>Stok</th>
+                    <th>Durum</th>
+                    <th>Düzenle</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>10</td>
+                    <td>Ikura</td>
+                    <td>31$</td>
+                    <td>31</td>
+                    <td>Read to Go</td>
+                    <td>
+                        <button class="btn btn-sm btn-danger">Sil</button>
+                        <button class="btn btn-sm btn-warning">Güncelle</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>13</td>
+                    <td>Konbu</td>
+                    <td>6$</td>
+                    <td>24</td>
+                    <td>Read in 30 days</td>
+                    <td>
+                        <button class="btn btn-sm btn-danger">Sil</button>
+                        <button class="btn btn-sm btn-warning">Güncelle</button>
+                    </td>
+                </tr>
+
+
+                <tr style="text-align:center">
+                    <td colspan="6"> <button class="btn btn-success">Ürün Ekle</button> </td>
+
+                </tr>
+
+            </tbody>
+        </table>
+    </div>
+</div>

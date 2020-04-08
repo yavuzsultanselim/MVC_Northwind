@@ -6,10 +6,10 @@ using System.Web.Mvc;
 
 namespace MVC_Northwind.Controllers
 {
-    public class HomeController : Controller
+    public class OrderController : Controller
     {
-        // GET: Home
-        public ViewResult Index()
+        // GET: Order
+        public ActionResult Index()
         {
             return View();
         }
