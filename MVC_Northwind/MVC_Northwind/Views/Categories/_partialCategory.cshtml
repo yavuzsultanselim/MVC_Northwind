@@ -1,0 +1,14 @@
+﻿@model List<MVC_Northwind.Models.Category>
+<div class="col-lg-3">
+
+    <h1 class="my-4">Categories</h1>
+    <div class="list-group">
+        @foreach (var category in Model)
+        {
+            <a href="/Categories/@category.CategoryName" class="list-group-item">@category.CategoryName</a>
+        }
+       
+
+    </div>
+
+</div>

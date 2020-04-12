@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MVC_Northwind.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -9,6 +10,7 @@ namespace MVC_Northwind.Controllers
     public class CategoriesController : Controller
     {
         // GET: Categories
+        NorthwindEntities db = new NorthwindEntities();
         public ViewResult Beverages()
         {
             return View();
@@ -41,7 +43,11 @@ namespace MVC_Northwind.Controllers
         {
             return View();
         }
+     
 
-
+        public PartialViewResult _partialCategory()
+        {
+            return PartialView(db.Categories.ToList());
+        }
     }
 }

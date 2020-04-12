@@ -1,0 +1,11 @@
+﻿@model MVC_Northwind.Models.Product
+@{
+    ViewBag.Title = "Detail";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>@Model.ProductName</h2>
+<ul>
+    <li>@Model.UnitPrice<li>
+    <li>@Model.UnitsInStock</li>
+</ul>

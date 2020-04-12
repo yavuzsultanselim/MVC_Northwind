@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MVC_Northwind.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -9,9 +10,10 @@ namespace MVC_Northwind.Controllers
     public class HomeController : Controller
     {
         // GET: Home
+        NorthwindEntities db = new NorthwindEntities();
         public ViewResult Index()
         {
-            return View();
+            return View(db.Products.ToList());
         }
     }
 }

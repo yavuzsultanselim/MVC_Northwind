@@ -70,3 +70,7 @@ C:\Users\yavuz\source\repos\Github\MVC_Northwind\MVC_Northwind\MVC_Northwind\obj
 C:\Users\yavuz\source\repos\Github\MVC_Northwind\MVC_Northwind\MVC_Northwind\obj\Debug\MVC_Northwind.csproj.CopyComplete
 C:\Users\yavuz\source\repos\Github\MVC_Northwind\MVC_Northwind\MVC_Northwind\obj\Debug\MVC_Northwind.dll
 C:\Users\yavuz\source\repos\Github\MVC_Northwind\MVC_Northwind\MVC_Northwind\obj\Debug\MVC_Northwind.pdb
+C:\Users\yavuz\source\repos\Github\MVC_Northwind\MVC_Northwind\MVC_Northwind\bin\EntityFramework.dll
+C:\Users\yavuz\source\repos\Github\MVC_Northwind\MVC_Northwind\MVC_Northwind\bin\EntityFramework.SqlServer.dll
+C:\Users\yavuz\source\repos\Github\MVC_Northwind\MVC_Northwind\MVC_Northwind\bin\EntityFramework.xml
+C:\Users\yavuz\source\repos\Github\MVC_Northwind\MVC_Northwind\MVC_Northwind\bin\EntityFramework.SqlServer.xml
