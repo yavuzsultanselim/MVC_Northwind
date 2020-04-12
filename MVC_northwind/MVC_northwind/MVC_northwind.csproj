@@ -215,16 +215,9 @@
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Order\Index.cshtml" />
     <Content Include="Views\Product\Index.cshtml" />
-    <Content Include="Views\Categories\Beverages.cshtml" />
-    <Content Include="Views\Categories\Condiments.cshtml" />
-    <Content Include="Views\Categories\Confections.cshtml" />
-    <Content Include="Views\Categories\DairyProducts.cshtml" />
-    <Content Include="Views\Categories\GrainsCereals.cshtml" />
-    <Content Include="Views\Categories\MeatPoultry.cshtml" />
-    <Content Include="Views\Categories\Produce.cshtml" />
-    <Content Include="Views\Categories\Seafood.cshtml" />
     <Content Include="Views\Product\Detail.cshtml" />
     <Content Include="Views\Categories\_partialCategory.cshtml" />
+    <Content Include="Views\Categories\Index.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

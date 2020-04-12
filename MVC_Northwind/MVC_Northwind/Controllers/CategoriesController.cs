@@ -11,39 +11,21 @@ namespace MVC_Northwind.Controllers
     {
         // GET: Categories
         NorthwindEntities db = new NorthwindEntities();
-        public ViewResult Beverages()
-        {
-            return View();
-        }
-        public ViewResult Condiments()
-        {
-            return View();
-        }
-        public ViewResult Confections()
-        {
-            return View();
-        }
-        public ViewResult DairyProducts()
-        {
-            return View();
-        }
-        public ViewResult GrainsCereals()
-        {
-            return View();
-        }
-        public ViewResult MeatPoultry()
-        {
-            return View();
-        }
-        public ViewResult Produce()
-        {
-            return View();
-        }
-        public ViewResult Seafood()
-        {
-            return View();
-        }
+       
      
+        public ViewResult Index(int id)
+        {
+            List<Product> products = new List<Product>();
+            foreach (var product in db.Products)
+            {
+                if (product.CategoryID== id)
+                {
+                    products.Add(product);
+
+                }
+            }
+            return View(products);
+        }
 
         public PartialViewResult _partialCategory()
         {
