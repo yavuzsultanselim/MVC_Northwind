@@ -12,9 +12,10 @@
 
     <!-- Bootstrap core CSS -->
     <link href="~/Content/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
-
+    <link href="~/Content/vendor/bootstrap/css/Site.css" rel="stylesheet" />
     <!-- Custom styles for this template -->
-    <link href="~/Content/css/shop-homepage.css" rel="stylesheet" />
+    @*<link href="~/Content/css/shop-homepage.css" rel="stylesheet" />*@
+    <script src="~/Content/vendor/bootstrap/js/modernizer.js"></script>
 </head>
 <body>
 
@@ -48,16 +49,13 @@
     </nav>
 
 
-    <!-- Page Content -->
-    @RenderBody()
-    <!-- /.container -->
-    <!-- Footer -->
-    <footer class="py-5 bg-dark">
-        <div class="container">
-            <p class="m-0 text-center text-white">Copyright &copy; Northwind 2020</p>
-        </div>
-        <!-- /.container -->
-    </footer>
+    <div class="container body-content">
+        @RenderBody()
+        <hr />
+        <footer>
+            <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
+        </footer>
+    </div>
 
     <!-- Bootstrap core JavaScript -->
     <script src="~/Content/vendor/jquery/jquery.min.js"></script>

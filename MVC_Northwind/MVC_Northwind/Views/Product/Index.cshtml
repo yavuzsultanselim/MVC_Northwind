@@ -6,36 +6,41 @@
 
     <div class="container">
         <div class="row">
+          
             <table class="table table-hover">
+
                 <thead>
                     <tr>
                         <th>Ürün Id</th>
                         <th>Ürün Adı</th>
                         <th>Fiyat</th>
                         <th>Stok</th>
-                        <th>Düzenle</th>
+                        <th><center>Düzenle </center> </th>
                     </tr>
                 </thead>
                 <tbody>
+
                     @foreach (var product in Model)
                     {
-                    <tr>
-                        <td>@product.ProductID</td>
-                        <td>@product.ProductName</td>
-                        <td>@product.UnitPrice $</td>
-                        <td>@product.UnitsInStock</td>
-                        <td>
-                            <button class="btn btn-sm btn-danger">Sil</button>
-                            <button class="btn btn-sm btn-warning">Güncelle</button>
-                            <a href="/Product/Detail/@product.ProductID" class="btn btn-sm btn-info">Bilgi</a>
-                        </td>
-                    </tr>
+                        <tr>
+                            <td>@product.ProductID</td>
+                            <td>@product.ProductName</td>
+                            <td>@product.UnitPrice $</td>
+                            <td>@product.UnitsInStock</td>
+                            <td>
+                                <center>
+                                    <a href="/Product/Delete/@product.ProductID" class="btn btn-sm btn-danger">Sil</a>
+                                    <a href="/Product/Update/@product.ProductID" class="btn btn-sm btn-warning">Güncelle</a>
+                                    <a href="/Product/Detail/@product.ProductID" class="btn btn-sm btn-info">Bilgi</a>
+                                </center>
+                            </td>
+                        </tr>
                     }
-
                     <tr style="text-align:center">
-                        <td colspan="6"> <button class="btn btn-success">Ürün Ekle</button> </td>
+                        <td colspan="6"> <a href="/Product/AddProduct" class="btn btn-success">Ürün Ekle</a> </td>
 
                     </tr>
+
 
                 </tbody>
             </table>

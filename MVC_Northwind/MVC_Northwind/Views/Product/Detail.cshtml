@@ -4,8 +4,14 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>@Model.ProductName</h2>
-<ul>
-    <li>@Model.UnitPrice<li>
-    <li>@Model.UnitsInStock</li>
-</ul>
+    <div class="row">
+        <div class="col-lg-12">
+            <h2>@Model.ProductName</h2>
+            <ul>
+                <li>@Model.UnitPrice $$</li>
+                <li>@Model.UnitsInStock Adet</li>
+              
+            </ul>
+
+        </div>
+    </div>
