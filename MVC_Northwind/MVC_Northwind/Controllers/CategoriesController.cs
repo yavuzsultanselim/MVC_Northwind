@@ -30,6 +30,8 @@ namespace MVC_Northwind.Controllers
 
         public PartialViewResult _partialCategory()
         {
+            List<Category> categories = db.Categories.ToList();
+            TempData["Categories"] = categories;
             return PartialView(db.Categories.ToList());
         }
 

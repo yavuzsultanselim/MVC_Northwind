@@ -5,7 +5,18 @@
 }
 
     <div class="container">
-        <center> <h2> </h2></center>
+        <center> <h2>@foreach (var category in TempData["Categories"] as List<MVC_Northwind.Models.Category>)
+        {
+            foreach (var product in Model)
+            {
+                if (category.CategoryID==product.CategoryID)
+                {
+                    @category.CategoryName
+                    break;
+                }
+            }
+
+        } </h2></center>
         <div class="row">
             <table class="table table-hover">
                 <thead>
