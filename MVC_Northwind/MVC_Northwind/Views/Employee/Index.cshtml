@@ -1,0 +1,77 @@
+﻿@model List<MVC_Northwind.Models.Employee>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<header class="bg-primary text-center py-5 mb-4">
+    <div class="container">
+        <h1 class="font-weight-light text-white">Employees</h1>
+    </div>
+</header>
+
+<!-- Page Content -->
+<div class="container">
+    <div class="row">
+        <!-- Team Member 1 -->
+        @foreach (var employee in Model)
+        {
+            <a class="col-xl-3 col-md-6 mb-4" href="/Employee/Details/@employee.EmployeeID">
+
+                <div class="card border-0 shadow">
+                    <img src="@employee.PhotoPath" class="card-img-top" alt="...">
+                    <div class="card-body text-center">
+                        <h5 class="card-title mb-0">@employee.TitleOfCourtesy @employee.FirstName @employee.LastName</h5>
+                        <div class="card-text text-black-50">@employee.Title</div>
+                    </div>
+                </div>
+
+            </a>
+
+        }
+
+    </div>
+    <!-- /.row -->
+    <a href="/Employee/AddEmployee" class="btn btn-success">Çalışan Ekle</a>
+</div>
+
+@*<div class="container">
+        <div class="row">
+
+            <table class="table table-hover">
+
+                <thead>
+                    <tr>
+                        <th>Çalışan Adı</th>
+                        <th>Ünvan</th>
+                        <th>İşe Alım Tarihi</th>
+                        <th><center>Düzenle </center> </th>
+                    </tr>
+                </thead>
+                <tbody>
+
+                    @foreach (var employee in Model)
+                    {
+                        <tr>
+                            <td>@employee.FirstName @employee.LastName</td>
+                            <td>@employee.Title</td>
+                            <td>@employee.HireDate</td>
+                            <td>
+                                <center>
+                                    <a href="/Employee/Delete/@employee.EmployeeID" class="btn btn-sm btn-danger">Sil</a>
+                                    <a href="/Employee/Update/@employee.EmployeeID" class="btn btn-sm btn-warning">Güncelle</a>
+                                    <a href="/Employee/Details/@employee.EmployeeID" class="btn btn-sm btn-info">Bilgi</a>
+                                </center>
+                            </td>
+                        </tr>
+                    }
+                    <tr style="text-align:center">
+                        <td colspan="6"> <a href="/Employee/AddEmployee" class="btn btn-success">Çalışan Ekle</a> </td>
+
+                    </tr>
+
+
+                </tbody>
+            </table>
+        </div>
+    </div>*@

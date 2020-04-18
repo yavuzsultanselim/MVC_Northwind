@@ -1,0 +1,61 @@
+﻿@model MVC_Northwind.Models.Employee
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+    <head>
+        <script>
+            function Sil() {
+                var deger = ' <div class="col-lg-12 rounded alert-danger" style="margin-top:10px;"> <p>Kalıcı Olarak Silmek İstiyor Musunuz?</p> <input type="submit" name="name" value="Evet" class="btn btn-danger" /> </div>';
+
+                document.getElementById("Delete").innerHTML = deger;
+            }
+        </script>
+    </head>
+
+<header class="bg-primary text-center py-5 mb-4">
+    <div class="container">
+        <h1 class="font-weight-light text-white">@Model.TitleOfCourtesy@Model.FirstName @Model.LastName</h1>
+    </div>
+</header>
+
+<!-- Page Content -->
+<div class="container">
+    @using (Html.BeginForm())
+    {
+        <div class="row">
+            <!-- Team Member 1 -->
+            <div class="col-xl-3 col-md-6 mb-4">
+                <div class="card border-0 shadow">
+                    <img src="@Model.PhotoPath" class="card-img-top" alt="@Model.FirstName">
+                    <div class="card-body text-center">
+                        <h5 class="card-title mb-0">@Model.FirstName @Model.LastName</h5>
+                        <div class="card-text text-black-50">@Model.Title</div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 ">
+                <ul>
+                    <li>Adresi: @Model.Address</li>
+                    <li>Doğum Tarihi: @Model.BirthDate</li>
+                    <li>Telefon Numarası: @Model.HomePhone</li>
+                    <li>İşe Alım Tarihi: @Model.HireDate</li>
+                    <li>Ülke: @Model.Country</li>
+                    <li>Şehir: @Model.City</li>
+                    <li>Posta Kodu: @Model.PostalCode</li>
+                    <li>Hakkında: @Model.Notes</li>
+                </ul>
+                <button style="margin-left:150px"class="btn btn-sm btn-danger" onclick="Sil()"> Sil</button>
+                @*<a style="margin-left:100px" href="/Employee/Delete/@Model.EmployeeID" class="btn btn-sm btn-danger">Sil</a>*@
+                <a style="margin-left:5px" href="/Employee/Update/@Model.EmployeeID" class="btn btn-sm btn-warning">Güncelle</a>
+            </div>
+
+        </div>
+        <!-- /.row -->
+        <div id="Delete" class="row">
+             
+        </div>
+       
+    }
+</div>
+

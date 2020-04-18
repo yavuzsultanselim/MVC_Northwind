@@ -1,0 +1,94 @@
+﻿@model MVC_Northwind.Models.Employee
+@{
+    ViewBag.Title = "AddEmployee";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<header class="bg-primary text-center py-5 mb-4">
+    <div class="container">
+        <h1 class="font-weight-light text-white">Yeni Çalışan</h1>
+    </div>
+</header>
+
+<!-- Page Content -->
+<div class="container">
+    <div class="row">
+        <!-- Team Member 1 -->
+        @*<div class="col-xl-3 col-md-6 mb-4">
+            <div class="card border-0 shadow">
+                <img src="@Model.Photo" class="card-img-top" alt="...">
+                <div class="card-body text-center">
+                    <h5 class="card-title mb-0">@Model.FirstName @Model.LastName</h5>
+                    <div class="card-text text-black-50">@Model.Title</div>
+                </div>
+            </div>
+        </div>*@
+        <div class="col-md-6 ">
+            @using (Html.BeginForm())
+            {
+                <div class="form-group">
+                    <label>Ünvan</label>
+                    @Html.TextBoxFor(x => x.Title, new { @class = "form-control", })
+                </div>
+                <div class="form-group">
+                    <label>Hitap</label>
+                    @Html.TextBoxFor(x => x.TitleOfCourtesy, new { @class = "form-control", })
+                </div>
+                <div class="form-group">
+                    <label>Adı</label>
+                    @Html.TextBoxFor(x => x.FirstName, new { @class = "form-control", })
+                </div>
+                <div class="form-group">
+                    <label>Soyadı</label>
+                    @Html.TextBoxFor(x => x.LastName, new { @class = "form-control", })
+                </div>
+                <div class="form-group">
+                    <label>Doğum Tarihi</label>
+                    @Html.TextBoxFor(x => x.BirthDate, new { @class = "form-control", placeholeder="yyyy-aa-gg" })
+                </div>
+                <div class="form-group">
+                    <label>Telefon</label>
+                    @Html.TextBoxFor(x => x.HomePhone, new { @class = "form-control", })
+                </div>
+                <div class="form-group">
+                    <label>İşe Alım Tarihi</label>
+                    @Html.TextBoxFor(x => x.HireDate, new { @class = "form-control", placeholeder = "yyyy-aa-gg" })
+                </div>
+                <div class="form-group">
+                    <label>Ülke</label>
+                    @Html.TextBoxFor(x => x.Country, new { @class = "form-control", })
+                </div>
+                <div class="form-group">
+                    <label>Şehir</label>
+                    @Html.TextBoxFor(x => x.City, new { @class = "form-control", })
+                </div>
+                <div class="form-group">
+                    <label>Adress</label>
+                    @Html.TextBoxFor(x => x.Address, new { @class = "form-control", })
+                </div>
+                <div class="form-group">
+                    <label>Posta Kodu</label>
+                    @Html.TextBoxFor(x => x.PostalCode, new { @class = "form-control", })
+                </div>
+                <div class="form-group">
+                    <label>Hakkında</label>
+                    @Html.TextBoxFor(x => x.Notes, new { @class = "form-control", })
+                </div>
+                <div class="form-group">
+                    <label>Fotoğraf Yolu</label>
+                    @Html.TextBoxFor(x => x.PhotoPath, new { @class = "form-control", })
+                </div>
+
+                <input type="submit" name="Gönderici" class="btn btn-primary" value="Kaydet" />
+
+
+
+            }
+
+        </div>
+
+    </div>
+    <!-- /.row -->
+
+</div>
+

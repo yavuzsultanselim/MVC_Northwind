@@ -14,7 +14,7 @@
                         <th>Ürün Adı</th>
                         <th>Fiyat</th>
                         <th>Stok</th>
-                        <th>Düzenle</th>
+                        <th><center>Düzenle </center></th>
                     </tr>
                 </thead>
                 <tbody>
@@ -26,18 +26,21 @@
                             <td>@product.UnitPrice</td>
                             <td>@product.UnitsInStock</td>
                             <td>
-                                <button class="btn btn-sm btn-danger">Sil</button>
-                                <button class="btn btn-sm btn-warning">Güncelle</button>
+                                <center>
+                                    <a href="/Product/Delete/@product.ProductID" class="btn btn-sm btn-danger">Sil</a>
+                                    <a href="/Product/Update/@product.ProductID" class="btn btn-sm btn-warning">Güncelle</a>
+                                    <a href="/Product/Detail/@product.ProductID" class="btn btn-sm btn-info">Bilgi</a>
+                                </center>
                             </td>
                         </tr>
                     }
 
 
 
-                    <tr style="text-align:center">
-                        <td colspan="6"> <button class="btn btn-success">Ürün Ekle</button> </td>
+                <tr style="text-align:center">
+                    <td colspan="6"> <a href="/Product/AddProduct" class="btn btn-success">Ürün Ekle</a> </td>
 
-                    </tr>
+                </tr>
 
                 </tbody>
             </table>

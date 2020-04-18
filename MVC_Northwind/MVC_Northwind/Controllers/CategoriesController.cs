@@ -12,6 +12,7 @@ namespace MVC_Northwind.Controllers
         // GET: Categories
         NorthwindEntities db = new NorthwindEntities();
        
+      
      
         public ViewResult Index(int id)
         {
@@ -31,5 +32,7 @@ namespace MVC_Northwind.Controllers
         {
             return PartialView(db.Categories.ToList());
         }
+
+    
     }
 }
