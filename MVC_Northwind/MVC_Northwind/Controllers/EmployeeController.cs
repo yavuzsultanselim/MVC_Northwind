@@ -1,4 +1,5 @@
-﻿using MVC_Northwind.Models;
+﻿using MVC_Northwind.Filters;
+using MVC_Northwind.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,10 +8,12 @@ using System.Web.Mvc;
 
 namespace MVC_Northwind.Controllers
 {
+    [AuthFilter]
     public class EmployeeController : Controller
     {
         NorthwindEntities db = new NorthwindEntities();
         // GET: Employee
+        
         public ActionResult Index()
         {
             

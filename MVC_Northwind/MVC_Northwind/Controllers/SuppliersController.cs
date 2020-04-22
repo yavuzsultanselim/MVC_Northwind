@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MVC_Northwind.Filters;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -6,6 +7,7 @@ using System.Web.Mvc;
 
 namespace MVC_Northwind.Controllers
 {
+    [AuthFilter]
     public class SuppliersController : Controller
     {
         // GET: Suppliers

@@ -38,5 +38,6 @@ namespace MVC_Northwind.Models
         public virtual DbSet<sysdiagram> sysdiagrams { get; set; }
         public virtual DbSet<Territory> Territories { get; set; }
         public virtual DbSet<Accesss> Accessses { get; set; }
+        public virtual DbSet<Log> Logs { get; set; }
     }
 }

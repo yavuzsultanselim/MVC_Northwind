@@ -1,4 +1,5 @@
-﻿using MVC_Northwind.Models;
+﻿using MVC_Northwind.Filters;
+using MVC_Northwind.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,6 +8,7 @@ using System.Web.Mvc;
 
 namespace MVC_Northwind.Controllers
 {
+    [AuthFilter]
     public class CategoriesController : Controller
     {
         // GET: Categories

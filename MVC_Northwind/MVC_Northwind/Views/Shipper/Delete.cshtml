@@ -1,0 +1,26 @@
+﻿@model MVC_Northwind.Models.Shipper 
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Delete</h2>
+<div class="col-lg-6">
+    <div class="card">
+
+        @using (Html.BeginForm())
+        {
+            @Html.HiddenFor(x => x.ShipperID);
+            <div class="card card-header">
+                @Model.CompanyName
+            </div>
+            <div class="card card-body">
+                @Model.Phone
+
+            </div>
+
+            <input type="submit" name="Gönderici" class="btn btn-primary" value="Sil" />
+            @Html.ActionLink("İptal","Index","Shipper",null,new { @class="btn btn-info"})
+        }
+    </div>
+</div>

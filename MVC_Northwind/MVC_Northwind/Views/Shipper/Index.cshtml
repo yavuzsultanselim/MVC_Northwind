@@ -1,0 +1,51 @@
+﻿@model List<MVC_Northwind.Models.Shipper>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+         @if (TempData["success"] != null)
+         {
+               <div class="alert alert-success">
+                   <span>@TempData["success"]</span>
+               </div>
+         }
+        <div class="card">
+            <div class="card card-header">
+                <h2>Shippers</h2>
+            </div>
+            <div class="card card-body">
+                <table class=" table table-striped">
+                   <thead>
+                       <tr>
+                           <th>ID</th>
+                           <th>Company Name</th>
+                           <th>Phone Number</th>
+                           <th><center>Düzenle</center></th>
+                       </tr>
+                   </thead>
+                   <tbody>
+                       @foreach (var shipper in Model)
+                       {
+                           <tr>
+                               <td>@shipper.ShipperID</td>
+                               <td>@shipper.CompanyName</td>
+                               <td>@shipper.Phone</td>
+                               <td>
+                                   <center>
+                                       <a href="/Shipper/Delete/@shipper.ShipperID" class="btn btn-sm btn-danger">Sil</a>
+                                       <a href="/Shipper/Update/@shipper.ShipperID" class="btn btn-sm btn-warning">Güncelle</a>
+                                   </center>
+                               </td>
+                           </tr>
+
+                       }
+                       <tr style="text-align:center">
+                           <td colspan="6"> <a href="/Shipper/AddShipper" class="btn btn-success">Nakliyeci Ekle</a> </td>
+
+                       </tr>
+                   </tbody>
+                </table>
+            </div>
+        </div>
+   

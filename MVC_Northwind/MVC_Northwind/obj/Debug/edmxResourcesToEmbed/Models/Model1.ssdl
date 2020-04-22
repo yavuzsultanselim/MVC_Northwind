@@ -81,6 +81,21 @@ warning 6002: The table/view 'Northwind.dbo.Accesss' does not have a primary key
     <Property Name="EmployeeID" Type="int" Nullable="false" />
     <Property Name="TerritoryID" Type="nvarchar" MaxLength="20" Nullable="false" />
   </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'Northwind.dbo.Log' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="Log">
+    <Key>
+      <PropertyRef Name="UserName" />
+      <PropertyRef Name="ActionName" />
+      <PropertyRef Name="ControllerName" />
+      <PropertyRef Name="Description" />
+    </Key>
+    <Property Name="UserName" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="ActionName" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="ControllerName" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Description" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Date" Type="datetime" />
+  </EntityType>
   <EntityType Name="Order Details">
     <Key>
       <PropertyRef Name="OrderID" />
@@ -352,6 +367,15 @@ warning 6002: The table/view 'Northwind.dbo.Accesss' does not have a primary key
     [Accesss].[UserName] AS [UserName], 
     [Accesss].[Passwword] AS [Passwword]
     FROM [dbo].[Accesss] AS [Accesss]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="Log" EntityType="Self.Log" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [Log].[UserName] AS [UserName], 
+    [Log].[ActionName] AS [ActionName], 
+    [Log].[ControllerName] AS [ControllerName], 
+    [Log].[Description] AS [Description], 
+    [Log].[Date] AS [Date]
+    FROM [dbo].[Log] AS [Log]</DefiningQuery>
     </EntitySet>
     <AssociationSet Name="FK_CustomerCustomerDemo" Association="Self.FK_CustomerCustomerDemo">
       <End Role="CustomerDemographics" EntitySet="CustomerDemographics" />
