@@ -1,4 +1,5 @@
-﻿using MVC_Northwind.Filters;
+﻿using MVC_Northwind.Areas.Kullanıcı;
+using MVC_Northwind.Filters;
 using MVC_Northwind.Models;
 using System;
 using System.Collections.Generic;
@@ -23,23 +24,30 @@ namespace MVC_Northwind.Controllers
             if (ModelState.IsValid)
             {
                 Accesss user = db.Accessses.FirstOrDefault(x => x.UserName == model.UserName && x.Passwword == model.Passwword);
+                Admin admin = db.Admins.FirstOrDefault(x => x.UserName == model.UserName && x.Password == model.Passwword);
                 if (user!=null)
                 {
                     Session["login"] = user;
-                    return RedirectToAction("HomePage","Home");
+                    return RedirectToAction("Index","Home",new {area="Kullanıcı" });
+                }
+                else if (admin != null)
+                {
+                    Session["adminlogin"] = user;
+                    return RedirectToAction("Index", "Home", new { area = "Admin" });
                 }
                 else
                 {
                     TempData["eror"] = "Böyle bir kullanıcı bulunamadı";
                     return View();
                 }
+
             }
             else
             {
                 return View();
             }
         }
-        [AuthFilter]
+        
         public ViewResult HomePage()
         {
             return View(db.Products.ToList());

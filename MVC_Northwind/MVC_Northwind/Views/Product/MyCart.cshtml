@@ -1,0 +1,37 @@
+﻿@model MVC_Northwind.Models.Cart
+@{
+    ViewBag.Title = "MyCart";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@foreach (var item in Model.myCart)
+{
+    <div class="col-12">
+        <div class="col-3" style="float:left">
+            @item.ID
+        </div>
+        <div class="col-6" style=" float:left">
+            @item.Name, adet fiyatı @item.Price
+        </div>
+        <div class="col-3" style="float:left">
+            @item.SubTotal
+        </div>
+    </div>
+}
+<div class="col-3" style="float:right">
+    @foreach (var item in Model.myCart)
+    {
+        @item.Total
+        
+
+    }
+    
+</div>
+
+
+
+
+
+
+
+

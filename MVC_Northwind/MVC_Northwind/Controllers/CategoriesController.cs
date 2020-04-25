@@ -8,7 +8,7 @@ using System.Web.Mvc;
 
 namespace MVC_Northwind.Controllers
 {
-    [AuthFilter]
+   
     public class CategoriesController : Controller
     {
         // GET: Categories

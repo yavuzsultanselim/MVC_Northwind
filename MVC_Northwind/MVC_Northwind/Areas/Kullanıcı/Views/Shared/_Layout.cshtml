@@ -16,9 +16,6 @@
     <!-- Custom styles for this template -->
     @*<link href="~/Content/css/shop-homepage.css" rel="stylesheet" />*@
     <script src="~/Content/vendor/bootstrap/js/modernizer.js"></script>
-    @{
-        MVC_Northwind.Models.Cart cart = Session["scart"] as MVC_Northwind.Models.Cart;
-    }
 </head>
 <body>
 
@@ -32,31 +29,17 @@
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item active">
-                        <a class="nav-link" href="/Home/Index">
+                        <a class="nav-link" href="/Kullanıcı/Home/Index">
                             Anasayfa
                             <span class="sr-only">(current)</span>
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/Product/Index">Ürünler</a>
+                        <a class="nav-link" href="/Kullanıcı/Product/Index">Ürünler</a>
                     </li>
+                    
                     <li class="nav-item">
-                        <a class="nav-link" href="/Order/Index">Siparişler</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/Employee/Index">Çalışanlar</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/Shipper/Index">Naklyeciler</a>
-                    </li>
-                    <li>
-                        <a href="@Url.Action("MyCart","Product")" class="nav-link">
-                            Sepetim
-                            @if (cart != null)
-                            {
-                                <span class="badge badge-succes">@cart.myCart.Count()</span>
-                            }
-                        </a>
+                        <a class="nav-link" href="/Kullanıcı/Product/MyCard">Sepetim</a>
                     </li>
 
 

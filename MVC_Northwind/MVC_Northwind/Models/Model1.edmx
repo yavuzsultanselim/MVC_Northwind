@@ -15,6 +15,18 @@ warning 6002: The table/view 'Northwind.dbo.Accesss' does not have a primary key
           <Property Name="UserName" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="Passwword" Type="nvarchar" MaxLength="50" Nullable="false" />
         </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'Northwind.dbo.Admin' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="Admin">
+          <Key>
+            <PropertyRef Name="Id" />
+            <PropertyRef Name="UserName" />
+            <PropertyRef Name="Password" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="UserName" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Password" Type="nvarchar" MaxLength="50" Nullable="false" />
+        </EntityType>
         <EntityType Name="Categories">
           <Key>
             <PropertyRef Name="CategoryID" />
@@ -373,6 +385,13 @@ warning 6002: The table/view 'Northwind.dbo.Log' does not have a primary key def
     [Accesss].[Passwword] AS [Passwword]
     FROM [dbo].[Accesss] AS [Accesss]</DefiningQuery>
           </EntitySet>
+          <EntitySet Name="Admin" EntityType="Self.Admin" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [Admin].[Id] AS [Id], 
+    [Admin].[UserName] AS [UserName], 
+    [Admin].[Password] AS [Password]
+    FROM [dbo].[Admin] AS [Admin]</DefiningQuery>
+          </EntitySet>
           <EntitySet Name="Log" EntityType="Self.Log" store:Type="Tables" store:Schema="dbo">
             <DefiningQuery>SELECT 
     [Log].[UserName] AS [UserName], 
@@ -620,6 +639,16 @@ warning 6002: The table/view 'Northwind.dbo.Log' does not have a primary key def
           <Property Name="UserName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="Passwword" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
         </EntityType>
+        <EntityType Name="Admin">
+          <Key>
+            <PropertyRef Name="Id" />
+            <PropertyRef Name="UserName" />
+            <PropertyRef Name="Password" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="UserName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Password" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+        </EntityType>
         <EntityType Name="Log">
           <Key>
             <PropertyRef Name="UserName" />
@@ -763,6 +792,7 @@ warning 6002: The table/view 'Northwind.dbo.Log' does not have a primary key def
           <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagram" />
           <EntitySet Name="Territories" EntityType="Self.Territory" />
           <EntitySet Name="Accessses" EntityType="Self.Accesss" />
+          <EntitySet Name="Admins" EntityType="Self.Admin" />
           <EntitySet Name="Logs" EntityType="Self.Log" />
           <AssociationSet Name="FK_Products_Categories" Association="Self.FK_Products_Categories">
             <End Role="Categories" EntitySet="Categories" />
@@ -981,6 +1011,15 @@ warning 6002: The table/view 'Northwind.dbo.Log' does not have a primary key def
               <MappingFragment StoreEntitySet="Accesss">
                 <ScalarProperty Name="UserName" ColumnName="UserName" />
                 <ScalarProperty Name="Passwword" ColumnName="Passwword" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Admins">
+            <EntityTypeMapping TypeName="NorthwindModel.Admin">
+              <MappingFragment StoreEntitySet="Admin">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="UserName" ColumnName="UserName" />
+                <ScalarProperty Name="Password" ColumnName="Password" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
